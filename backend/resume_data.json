@@ -1,0 +1,50 @@
+{
+  "name": "AYUSH SACHAN",
+  "email": "ayushsachan162@gmail.com",
+  "phone": "+91 9151112733",
+  "total_experience_years": null,
+  "skills": [
+    "Python",
+    "SQL",
+    "C++",
+    "FastAPI",
+    "RESTful APIs",
+    "Alembic",
+    "MySQL",
+    "SQLite",
+    "ChromaDB",
+    "Snowflake",
+    "AWS (S3, IAM, Cloud Basics)",
+    "Retrieval-Augmented Generation (RAG)",
+    "LLM Integration",
+    "Prompt Engineering",
+    "Data Structures & Algorithms",
+    "Object-Oriented Programming (OOP)",
+    "DBMS",
+    "Git",
+    "JWT",
+    "Tailwind CSS",
+    "Jinja2",
+    "XGBoost",
+    "React.js",
+    "Machine Learning",
+    "SQLAlchemy",
+    "Groq API"
+  ],
+  "experiences": [],
+  "education": [
+    "NIT DURGAPUR (2025 - 2027) - Master of Technology in Computer Science and Engineering, CGPA: 8.47/10",
+    "ABES ENGINEERING COLLEGE (2021 - 2025) - Bachelor of Technology in Computer Science, CGPA: 8.02/10"
+  ],
+  "projects": [
+    "SQL Data Warehouse: Designed and implemented a modern data warehouse using Medallion Architecture in SQL Server, integrated ERP and CRM datasets, developed ETL pipelines, and generated SQL-based reports.",
+    "TaskFlow: AI-Powered Task Management System: Developed a secure full-stack web application with FastAPI, Jinja2, Tailwind CSS, JWT authentication, relational schema with SQLAlchemy and SQLite, Alembic migrations, integrated ChromaDB vector store, and built REST APIs with RAG pipeline using Groq API.",
+    "Water Footprint Calculator: Developed a web application using React.js and FastAPI to estimate domestic water footprint, built XGBoost regression model, and created rule-based recommendation system."
+  ],
+  "certifications": [
+    "FastAPI - The Complete Course 2026 (Udemy)",
+    "AWS Academy: Introduction to Cloud (Semester 1 & 2) (AWS)",
+    "Essentials of Cloud Computing (Infosys)",
+    "Prompt and Context Engineering 101 (Udemy)"
+  ]
+}
