@@ -338,18 +338,26 @@ function App() {
 
     <div className="project-list">
       <article className="project-card">
-        <h3>AI Portfolio Assistant</h3>
-        <p>
-          An interactive AI-powered portfolio that answers questions about
-          my background and projects using a React frontend and FastAPI
-          backend, with streamed responses from an LLM.
-        </p>
+        <h3>AI-Powered Task Management System</h3>
+        <ul className="project-description">
+          <li>
+            Built a multi-tenant RAG copilot achieving &lt;7ms vector search and &lt;500ms completions via ChromaDB and Groq LPUs.
+          </li>
+          <li>
+            Engineered real-time semantic deduplication reaching 92–96% semantic accuracy and 100% exact precision at 8–16ms latency.
+          </li>
+          <li>
+            Architected a SaaS backend handling 800+ reads/sec (0.62ms query time) with JWT auth, Alembic migrations, and Pytest suites.
+          </li>
+        </ul>
+
+        
         <p className="project-tech">
-          React · TypeScript · FastAPI · Python · Groq
+          FastAPI · Python · ChromaDB · Groq API · SQLite · JWT
         </p>
         <a
           className="source-code-link"
-          href="https://github.com/YOUR_USERNAME/YOUR_PORTFOLIO_REPO"
+          href="https://github.com/Ayushsachancs-A/TaskFlow-AI-Powered-Task-Management-System"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -358,18 +366,24 @@ function App() {
       </article>
 
       <article className="project-card">
-        <h3>Adaptive Multi-LLM Platform</h3>
-        <p>
-          An AI platform designed to route user queries to suitable language
-          models, evaluate their responses, and combine results to improve
-          answer quality.
-        </p>
+        <h3>AYUSH AI</h3>
+         <ul className="project-description">
+          <li>
+            Built a full-stack AI portfolio assistant using React and FastAPI, streaming real-time LLM responses via Groq API with sub-second TTFT.
+          </li>
+          <li>
+            Automated PDF parsing into structured Pydantic models with thread-safe in-memory caching, eliminating redundant LLM extraction calls.
+          </li>
+          <li>
+           Implemented multi-turn chat memory with strict prompt guardrails, ensuring 100% factual accuracy grounded in verified resume data.
+          </li>
+        </ul>
         <p className="project-tech">
-          Python · FastAPI · LLM APIs · Model Routing
+          React · TypeScript · FastAPI · Python · Groq · RAG
         </p>
         <a
           className="source-code-link"
-          href="https://github.com/YOUR_USERNAME/YOUR_MULTILLM_REPO"
+          href="https://github.com/Ayushsachancs-A/my-AI"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -378,24 +392,81 @@ function App() {
       </article>
 
       <article className="project-card">
-        <h3>Post-Quantum 5G-AKA Research</h3>
-        <p>
-          Research exploring post-quantum cryptographic mechanisms for
-          5G authentication, with a focus on authentication overhead,
-          key derivation, and communication efficiency.
-        </p>
+        <h3>SQL Data Warehouse</h3>
+        <ul className="project-description">
+        <li>
+          Built a Medallion Data Warehouse consolidating 116K+ ERP/CRM records in &lt;3s via T-SQL BULK INSERT and SSIS.
+        </li>
+        <li>
+          Cut analytical query latency by 70–80% (from ~5s to &lt;0.8s) by designing a Star Schema with integer surrogate keys.
+        </li>
+        <li>
+          Delivered RFM customer and product data marts governing $29.4M in revenue using windowed queries and deduplication.
+        </li>
+      </ul>
         <p className="project-tech">
-          Post-Quantum Cryptography · ML-KEM · 5G Authentication
+          SQL Server · T-SQL · SSIS · Data Warehousing · Star Schema
         </p>
         <a
           className="source-code-link"
-          href="https://github.com/YOUR_USERNAME/YOUR_PQC_REPO"
+          href="https://github.com/Ayushsachancs-A/sql-data-Warehouse"
           target="_blank"
           rel="noopener noreferrer"
         >
           &lt;/&gt; View Source Code ↗
         </a>
       </article>
+      <article className="project-card">
+        <h3>Crypto Market Data Lake</h3>
+        <ul className="project-description">
+          <li>
+            Automated micro-batch ingestion for 3 crypto assets at &lt;1.2s latency using hourly Python/Boto3 scripts into AWS S3.
+          </li>
+          <li>
+            Enabled zero-copy schema-on-read processing in Snowflake via S3 external stages and automated COPY INTO pipelines.
+          </li>
+          <li>
+            Built a Streamlit dashboard visualizing 24h price deltas and 6-hour moving averages over 500 real-time records.
+          </li>
+        </ul>
+        <p className="project-tech">
+          Python · AWS S3 · Snowflake · Streamlit · Plotly · REST APIs
+        </p>
+        <a
+          className="source-code-link"
+          href="https://github.com/Ayushsachancs-A/Crypto-market-trends"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          &lt;/&gt; View Source Code ↗
+        </a>
+      </article>
+      <article className="project-card">
+        <h3>Water Footprint Calculator</h3>
+        <ul className="project-description">
+          <li>
+            Built a decoupled ML service serving predictions in &lt;25ms (0.68ms inference) using FastAPI, React, and DMatrix serialization.
+          </li>
+          <li>
+            Trained a 1,000-tree XGBoost regressor on 100K records, achieving 98.82% accuracy (R² ≈ 0.999) under an 80/20 split.
+          </li>
+          <li>
+            Automated instant conservation recommendations via a deterministic post-inference engine executing in 0.01ms.
+          </li>
+        </ul>
+        <p className="project-tech">
+          FastAPI · React · Python · XGBoost · Scikit-Learn · REST APIs
+        </p>
+        <a
+          className="source-code-link"
+          href="https://github.com/Ayushsachancs-A/waterfootprint-calculator"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          &lt;/&gt; View Source Code ↗
+        </a>
+      </article>
+      
     </div>
   </>
 )}
