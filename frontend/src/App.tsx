@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -10,7 +10,7 @@ type Message = {
 
 type NavSection = "about" | "projects" | "contact" | null;
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
 function App() {
   const [question, setQuestion] = useState("");
@@ -20,6 +20,20 @@ function App() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [chatStarted, setChatStarted] = useState(false);
   const [activeSection, setActiveSection] = useState<NavSection>(null);
+  const [waking, setWaking] = useState(false);
+  const [profileConfig, setProfileConfig] = useState({
+    profile_title: "Backend & AI Engineer",
+    profile_subtitle: "AI ENGINEER · DEVELOPER",
+    hero_description: "Building intelligent applications\nwith AI and modern technology.",
+    resume_download_file: "/resume-ai.pdf",
+  });
+
+  useEffect(() => {
+    fetch(`${API_URL}/config`)
+      .then((res) => res.json())
+      .then((data) => setProfileConfig(data))
+      .catch(() => {}); // silently fall back to defaults
+  }, []);
 
   async function askAI(customQuestion?: string) {
     const currentQuestion = (customQuestion ?? question).trim();
@@ -40,6 +54,8 @@ function App() {
 
     let fullAnswer = "";
 
+    const wakeTimer = setTimeout(() => setWaking(true), 3000);
+
     try {
       const response = await fetch(`${API_URL}/chat/stream`, {
         method: "POST",
@@ -51,6 +67,9 @@ function App() {
           history: previousMessages,
         }),
       });
+
+      clearTimeout(wakeTimer);
+      setWaking(false);
 
       if (!response.ok) {
         const data: { detail?: string } = await response
@@ -86,6 +105,8 @@ function App() {
         { role: "assistant", content: fullAnswer },
       ]);
     } catch (err) {
+      clearTimeout(wakeTimer);
+      setWaking(false);
       console.error("AI request failed:", err);
       setMessages(previousMessages);
       setAnswer("");
@@ -151,7 +172,7 @@ function App() {
           )}
 
           <a
-            href="/resume.pdf"
+            href={profileConfig.resume_download_file || "/resume-ai.pdf"}
             target="_blank"
             rel="noopener noreferrer"
             className="resume-button"
@@ -166,7 +187,7 @@ function App() {
           <div className="hero-content">
             <p className="hero-label">
               <span className="status-dot"></span>
-              AI ENGINEER · DEVELOPER
+              {profileConfig.profile_subtitle}
             </p>
 
             <h1>
@@ -174,9 +195,12 @@ function App() {
             </h1>
 
             <p className="hero-description">
-              Building intelligent applications
-              <br />
-              with AI and modern technology.
+              {profileConfig.hero_description.split("\n").map((line, i, arr) => (
+                <span key={i}>
+                  {line}
+                  {i < arr.length - 1 && <br />}
+                </span>
+              ))}
             </p>
 
             <form className="ai-input" onSubmit={handleSubmit}>
@@ -214,6 +238,13 @@ function App() {
               >
                 My Projects
               </button>
+              <button
+                type="button"
+                disabled={loading}
+                onClick={() => void askAI("I would like to connect with Ayush for an interview.")}
+              >
+                Contact / Hire
+              </button>
             </div>
 
             {error && (
@@ -248,8 +279,15 @@ function App() {
 
             {loading && (
               <article className="chat-message assistant">
-                <p className="message-label">AI ASSISTANT · GENERATING</p>
+                <p className={`message-label ${waking ? "waking" : ""}`}>
+                  {waking ? "SERVER COLD STARTING" : "AI ASSISTANT · GENERATING"}
+                </p>
                 <div className="answer-text">
+                  {waking && !answer && (
+                    <p className="waking-hint">
+                      Waking up the AI assistant... This takes ~30 seconds on the first visit.
+                    </p>
+                  )}
                   <ReactMarkdown remarkPlugins={[remarkGfm]}>
                     {answer}
                   </ReactMarkdown>
