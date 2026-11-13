@@ -35,6 +35,12 @@ function App() {
       .catch(() => {}); // silently fall back to defaults
   }, []);
 
+  useEffect(() => {
+    if (profileConfig.profile_title) {
+      document.title = `Ayush Sachan | ${profileConfig.profile_title}`;
+    }
+  }, [profileConfig.profile_title]);
+
   async function askAI(customQuestion?: string) {
     const currentQuestion = (customQuestion ?? question).trim();
 
