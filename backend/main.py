@@ -69,18 +69,16 @@ def rate_limit_custom_handler(request: Request, exc: RateLimitExceeded):
         },
     )
 
-# --- CORS: accept an optional FRONTEND_URL for production deployments ---
-frontend_url = os.getenv("FRONTEND_URL", "")
-origins = ["http://localhost:5173", "http://127.0.0.1:5173"]
-if frontend_url:
-    origins.append(frontend_url)
+# --- CORS: allow public portfolio access from Vercel and local dev ---
+frontend_url = os.getenv("FRONTEND_URL", "").rstrip("/")
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=False,
-    allow_methods=["GET", "POST"],
-    allow_headers=["Content-Type"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Keep file paths relative to main.py.
