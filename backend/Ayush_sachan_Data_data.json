@@ -23,8 +23,8 @@
     "Git",
     "GitHub",
     "Docker",
-    "SSIS",
     "SQL Server",
+    "SSIS",
     "Alembic",
     "SQLAlchemy"
   ],
@@ -34,13 +34,62 @@
     "ABES ENGINEERING COLLEGE 2021 – 2025 Bachelor of Technology in Computer Science 8.02 / 10 CGPA"
   ],
   "projects": [
-    "SQL Data Warehouse | T-SQL, SQL Server, Medallion Architecture",
-    "Crypto Market Data Lake | Python, AWS S3, Snowflake, Streamlit, Plotly",
-    "TaskFlow: AI Vector Indexing & Data Pipeline | Python, SQLite, SQLAlchemy, ChromaDB"
+    {
+      "name": "SQL Data Warehouse",
+      "technologies": [
+        "T-SQL",
+        "SQL Server",
+        "Medallion Architecture"
+      ],
+      "description": "Built an enterprise Medallion Data Warehouse consolidating 116K+ ERP/CRM records with high-performance ETL pipelines.",
+      "bullet_points": [
+        "Built an enterprise Medallion Data Warehouse consolidating 116K+ ERP/CRM records in <3s via T-SQL BULK INSERT with TABLOCK and SSIS staging workflows.",
+        "Cut analytical query latency by 70–80% (from ~5s to <0.8s) by architecting a Gold Star Schema with integer surrogate keys replacing a 6-table join graph.",
+        "Delivered aggregated RFM customer and product data marts governing $29.4M in revenue across 27.6K orders using windowed queries and automated deduplication."
+      ]
+    },
+    {
+      "name": "Crypto Market Data Lake",
+      "technologies": [
+        "Python",
+        "AWS S3",
+        "Snowflake",
+        "Streamlit",
+        "Plotly"
+      ],
+      "description": "Automated ingestion and analytics pipeline for cryptocurrency market data with real‑time visual dashboards.",
+      "bullet_points": [
+        "Automated micro-batch ingestion for 3 crypto assets at <1.2s latency using hourly Python scripts extracting CoinGecko REST APIs into AWS S3.",
+        "Enabled zero-copy schema-on-read processing in Snowflake via S3 external stages and automated COPY INTO pipelines, eliminating transformation bottlenecks.",
+        "Built a real-time Streamlit and Plotly analytics dashboard visualizing 24h price deltas via SQL LAG() and 6‑hour moving averages across 500 records."
+      ]
+    },
+    {
+      "name": "TaskFlow: AI Vector Indexing & Data Pipeline",
+      "technologies": [
+        "Python",
+        "SQLite",
+        "SQLAlchemy",
+        "ChromaDB"
+      ],
+      "description": "Vector indexing and semantic deduplication pipeline with multi‑tenant support and fast query performance.",
+      "bullet_points": [
+        "Engineered a vector indexing pipeline using ChromaDB, achieving 6.60ms Top‑5 retrieval and strict multi‑tenant partition filtering across task embeddings.",
+        "Designed relational schemas in SQLite via SQLAlchemy, indexing foreign keys to achieve 0.62ms read queries and executing automated versioned migrations via Alembic.",
+        "Built an automated semantic deduplication pipeline using cosine similarity scoring, reaching 92–96% semantic accuracy and 100% exact match precision at 8–16ms latency."
+      ]
+    }
+  ],
+  "achievements": [
+    "Solved 400+ DSA problems on LeetCode.",
+    "Earned a 3-Star rating on CodeChef."
   ],
   "certifications": [
-    "AWS Academy: Introduction to Cloud (Semester 1 & 2)(AWS)",
-    "SQL (Intermediate) – HackerRank Skill Certification(Hackerrank)",
-    "Prompt and Context Engineering 101(Udemy)"
+    "AWS Academy: Introduction to Cloud (Semester 1 & 2) (AWS).",
+    "SQL (Intermediate) – HackerRank Skill Certification (Hackerrank).",
+    "Prompt and Context Engineering 101 (Udemy)."
+  ],
+  "positions_of_responsibility": [
+    "President | ENIGMA PROGRAMMING CLUB: Led the college-wide technical community, conducting hands-on problem-solving workshops and peer-mentoring 200+ students in algorithms and system development."
   ]
 }

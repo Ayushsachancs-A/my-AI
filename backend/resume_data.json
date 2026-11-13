@@ -9,42 +9,95 @@
     "C++",
     "FastAPI",
     "RESTful APIs",
-    "Alembic",
-    "MySQL",
-    "SQLite",
-    "ChromaDB",
-    "Snowflake",
-    "AWS (S3, IAM, Cloud Basics)",
-    "Retrieval-Augmented Generation (RAG)",
-    "LLM Integration",
-    "Prompt Engineering",
-    "Data Structures & Algorithms",
-    "Object-Oriented Programming (OOP)",
-    "DBMS",
-    "Git",
-    "JWT",
-    "Tailwind CSS",
-    "Jinja2",
-    "XGBoost",
-    "React.js",
-    "Machine Learning",
     "SQLAlchemy",
-    "Groq API"
+    "Alembic",
+    "RAG Pipelines",
+    "ChromaDB",
+    "Semantic Search",
+    "Embeddings",
+    "SQLite",
+    "MySQL",
+    "AWS",
+    "S3",
+    "IAM",
+    "Data Structures & Algorithms",
+    "DSA",
+    "OOP",
+    "Git",
+    "Docker",
+    "JWT",
+    "Pytest",
+    "React.js",
+    "XGBoost",
+    "Scikit-Learn",
+    "Automation",
+    "Snowflake"
   ],
   "experiences": [],
   "education": [
-    "NIT DURGAPUR (2025 - 2027) - Master of Technology in Computer Science and Engineering, CGPA: 8.47/10",
-    "ABES ENGINEERING COLLEGE (2021 - 2025) - Bachelor of Technology in Computer Science, CGPA: 8.02/10"
+    "M.Tech Computer Science and Engineering, NIT Durgapur (2025–2027), CGPA 8.47/10",
+    "B.Tech Computer Science, ABES Engineering College (2021–2025), CGPA 8.02/10"
   ],
   "projects": [
-    "SQL Data Warehouse: Designed and implemented a modern data warehouse using Medallion Architecture in SQL Server, integrated ERP and CRM datasets, developed ETL pipelines, and generated SQL-based reports.",
-    "TaskFlow: AI-Powered Task Management System: Developed a secure full-stack web application with FastAPI, Jinja2, Tailwind CSS, JWT authentication, relational schema with SQLAlchemy and SQLite, Alembic migrations, integrated ChromaDB vector store, and built REST APIs with RAG pipeline using Groq API.",
-    "Water Footprint Calculator: Developed a web application using React.js and FastAPI to estimate domestic water footprint, built XGBoost regression model, and created rule-based recommendation system."
+    {
+      "name": "TaskFlow: AI-Powered Task Management System",
+      "technologies": [
+        "FastAPI",
+        "ChromaDB",
+        "SQLite",
+        "JWT",
+        "Alembic",
+        "Pytest"
+      ],
+      "description": "Multi‑tenant RAG copilot with real‑time semantic deduplication and high‑throughput SaaS backend.",
+      "bullet_points": [
+        "Built a multi‑tenant RAG copilot achieving <7ms vector search and <500ms completions via ChromaDB (HNSW) and Groq LPUs.",
+        "Engineered real‑time semantic deduplication reaching 92–96% semantic accuracy and 100% exact precision at 8–16ms latency.",
+        "Architected a SaaS backend handling 800+ reads/sec (0.62ms query time) with JWT auth, Alembic migrations, and Pytest suites."
+      ]
+    },
+    {
+      "name": "Water Footprint Calculator",
+      "technologies": [
+        "FastAPI",
+        "React.js",
+        "XGBoost",
+        "Scikit-Learn",
+        "REST APIs"
+      ],
+      "description": "Decoupled ML service delivering water‑footprint predictions with ultra‑low latency.",
+      "bullet_points": [
+        "Built a decoupled ML service serving predictions in <25ms (0.68ms inference) using FastAPI, React, and DMatrix serialization.",
+        "Trained a 1,000‑tree XGBoost regressor on 100K records, achieving 98.82% accuracy (R²≈0.999) under an 80/20 train‑test split.",
+        "Automated instant conservation recommendations via a deterministic post‑inference engine executing in 0.01ms."
+      ]
+    },
+    {
+      "name": "Crypto Market Data Lake",
+      "technologies": [
+        "Python",
+        "AWS S3",
+        "REST APIs",
+        "Automation"
+      ],
+      "description": "Asynchronous data pipeline ingesting cryptocurrency market data and storing it for analytics.",
+      "bullet_points": [
+        "Built an asynchronous Python worker consuming CoinGecko REST APIs with automated retries and <1.2s execution time.",
+        "Streamlined hourly batch persistence to AWS S3, automating JSON extraction, schema transformation, and CSV partitioning.",
+        "Optimized downstream warehouse query readiness by organizing cloud buckets for zero‑copy Snowflake external stages."
+      ]
+    }
+  ],
+  "achievements": [
+    "Solved 400+ DSA problems on LeetCode.",
+    "Earned a 3‑Star rating on CodeChef."
   ],
   "certifications": [
     "FastAPI - The Complete Course 2026 (Udemy)",
     "AWS Academy: Introduction to Cloud (Semester 1 & 2) (AWS)",
-    "Essentials of Cloud Computing (Infosys)",
     "Prompt and Context Engineering 101 (Udemy)"
+  ],
+  "positions_of_responsibility": [
+    "President, ENIGMA PROGRAMMING CLUB: Led the college‑wide technical community, conducting hands‑on problem‑solving workshops and peer‑mentoring 200+ students in algorithms and system development."
   ]
 }
