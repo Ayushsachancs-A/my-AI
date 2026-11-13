@@ -1,0 +1,46 @@
+{
+  "name": "AYUSH SACHAN",
+  "email": "ayushsachan162@gmail.com",
+  "phone": "+91 9151112733",
+  "total_experience_years": null,
+  "skills": [
+    "Python",
+    "SQL",
+    "T-SQL",
+    "MySQL",
+    "SQLite",
+    "ChromaDB",
+    "Dimensional Modeling",
+    "Snowflake",
+    "AWS",
+    "S3",
+    "IAM",
+    "External Stages",
+    "REST API Ingestion",
+    "Power BI",
+    "Streamlit",
+    "Plotly",
+    "Git",
+    "GitHub",
+    "Docker",
+    "SSIS",
+    "SQL Server",
+    "Alembic",
+    "SQLAlchemy"
+  ],
+  "experiences": [],
+  "education": [
+    "NIT DURGAPUR 2025 – 2027 Master of Technology in Computer Science and Engineering 8.47 / 10 CGPA",
+    "ABES ENGINEERING COLLEGE 2021 – 2025 Bachelor of Technology in Computer Science 8.02 / 10 CGPA"
+  ],
+  "projects": [
+    "SQL Data Warehouse | T-SQL, SQL Server, Medallion Architecture",
+    "Crypto Market Data Lake | Python, AWS S3, Snowflake, Streamlit, Plotly",
+    "TaskFlow: AI Vector Indexing & Data Pipeline | Python, SQLite, SQLAlchemy, ChromaDB"
+  ],
+  "certifications": [
+    "AWS Academy: Introduction to Cloud (Semester 1 & 2)(AWS)",
+    "SQL (Intermediate) – HackerRank Skill Certification(Hackerrank)",
+    "Prompt and Context Engineering 101(Udemy)"
+  ]
+}
